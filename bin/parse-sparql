@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+// Parse arguments
+var args = process.argv.slice(2);
+if (args.length < 1) {
+  console.log('usage: parse-sparql query.sparql');
+  return process.exit(1);
+}
+
+var fs = require('fs'),
+    SparqlParser = require('../lib/SparqlParser');
+
+// Parse and display the query
+var parser = new SparqlParser(),
+    query = fs.readFileSync(args[0]).toString(),
+    parseTree = parser.parse(query);
+console.log(JSON.stringify(parseTree, null, '  '));
