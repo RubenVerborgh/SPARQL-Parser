@@ -1,0 +1,5 @@
+{
+  "name": "sparql-parser",
+  "main": "lib/SparqlParser",
+  "bin": "bin/parse-sparql"
+}
