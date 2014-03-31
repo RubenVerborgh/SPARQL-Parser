@@ -1,5 +1,12 @@
 {
   "name": "sparql-parser",
+  "description": "SPARQL parser using rdfstore-js code, outputting an N3.js-compatible format",
+  "author": [
+    "Antonio Garrote <antoniogarrote@gmail.com>",
+    "Ruben Verborgh <ruben.verborgh@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
   "main": "lib/SparqlParser",
   "bin": "bin/parse-sparql"
 }
