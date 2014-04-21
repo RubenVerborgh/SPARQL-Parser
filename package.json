@@ -8,5 +8,12 @@
   "version": "0.1.0",
   "license": "MIT",
   "main": "lib/SparqlParser",
-  "bin": "bin/parse-sparql"
+  "bin": "bin/parse-sparql",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
+  }
 }

@@ -1,0 +1,53 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "*"
+  ],
+  "patterns": [
+    {
+      "type": "BGP",
+      "triples": [
+        {
+          "subject": "?city",
+          "predicate": "http://dbpedia.org/ontology/country",
+          "object": "http://dbpedia.org/resource/Belgium"
+        }
+      ]
+    },
+    {
+      "type": "UNION",
+      "patterns": [
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "?city",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "object": "?label"
+            }
+          ]
+        },
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "?city",
+              "predicate": "http://dbpedia.org/property/commonName",
+              "object": "?label"
+            }
+          ]
+        },
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "?city",
+              "predicate": "http://xmlns.com/foaf/0.1/name",
+              "object": "?label"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

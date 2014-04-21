@@ -1,0 +1,29 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "?party",
+    "?page"
+  ],
+  "patterns": [
+    {
+      "type": "BGP",
+      "triples": [
+        {
+          "subject": "http://dbpedia.org/resource/Barack_Obama",
+          "predicate": "http://dbpedia.org/ontology/party",
+          "object": "?party"
+        },
+        {
+          "subject": "?x",
+          "predicate": "http://data.nytimes.com/elements/topicPage",
+          "object": "?page"
+        },
+        {
+          "subject": "?x",
+          "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+          "object": "http://dbpedia.org/resource/Barack_Obama"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "?label"
+  ],
+  "patterns": [
+    {
+      "type": "UNION",
+      "patterns": [
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "http://dbpedia.org/resource/Belgium",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "object": "?label"
+            }
+          ]
+        },
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "http://dbpedia.org/resource/Belgium",
+              "predicate": "http://dbpedia.org/property/commonName",
+              "object": "?label"
+            }
+          ]
+        },
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "http://dbpedia.org/resource/Belgium",
+              "predicate": "http://xmlns.com/foaf/0.1/name",
+              "object": "?label"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

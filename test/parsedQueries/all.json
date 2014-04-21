@@ -1,0 +1,18 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "*"
+  ],
+  "patterns": [
+    {
+      "type": "BGP",
+      "triples": [
+        {
+          "subject": "?s",
+          "predicate": "?p",
+          "object": "?o"
+        }
+      ]
+    }
+  ]
+}
