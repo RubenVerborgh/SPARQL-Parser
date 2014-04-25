@@ -49,7 +49,7 @@
   "filters": [
     {
       "type": "operator",
-      "operator": "lessThanOrEqual",
+      "operator": "<=",
       "arguments": [
         {
           "type": "variable",
@@ -63,7 +63,7 @@
     },
     {
       "type": "operator",
-      "operator": "greaterThan",
+      "operator": ">",
       "arguments": [
         {
           "type": "variable",
@@ -83,7 +83,7 @@
         "arguments": [
           {
             "type": "operator",
-            "operator": "stringify",
+            "operator": "str",
             "arguments": [
               {
                 "type": "variable",

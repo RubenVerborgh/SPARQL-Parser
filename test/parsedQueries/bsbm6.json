@@ -24,7 +24,7 @@
   "filters": [
     {
       "type": "operator",
-      "operator": "testRegex",
+      "operator": "regex",
       "arguments": [
         {
           "type": "variable",

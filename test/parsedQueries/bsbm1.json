@@ -39,7 +39,7 @@
   "filters": [
     {
       "type": "operator",
-      "operator": "greaterThan",
+      "operator": ">",
       "arguments": [
         {
           "type": "variable",

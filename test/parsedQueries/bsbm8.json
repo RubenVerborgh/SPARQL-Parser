@@ -111,11 +111,11 @@
   "filters": [
     {
       "type": "operator",
-      "operator": "languageMatches",
+      "operator": "langmatches",
       "arguments": [
         {
           "type": "operator",
-          "operator": "getLanguage",
+          "operator": "lang",
           "arguments": [
             {
               "type": "variable",
