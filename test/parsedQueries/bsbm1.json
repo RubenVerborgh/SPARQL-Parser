@@ -60,5 +60,6 @@
       },
       "descending": false
     }
-  ]
+  ],
+  "limit": 10
 }

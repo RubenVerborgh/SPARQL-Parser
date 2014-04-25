@@ -138,5 +138,6 @@
       },
       "descending": true
     }
-  ]
+  ],
+  "limit": 20
 }

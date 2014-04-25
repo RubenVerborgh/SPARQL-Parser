@@ -1,0 +1,96 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "?product",
+    "?label",
+    "?propertyTextual"
+  ],
+  "patterns": [
+    {
+      "type": "UNION",
+      "patterns": [
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "?product",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "object": "?label"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType140"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+              "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4373"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+              "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1475"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1",
+              "object": "?propertyTextual"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1",
+              "object": "?p1"
+            }
+          ]
+        },
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "?product",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "object": "?label"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType140"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+              "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4373"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+              "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4372"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1",
+              "object": "?propertyTextual"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2",
+              "object": "?p2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "order": [
+    {
+      "expression": {
+        "type": "variable",
+        "value": "?label"
+      },
+      "descending": false
+    }
+  ],
+  "limit": 10,
+  "offset": 5
+}
