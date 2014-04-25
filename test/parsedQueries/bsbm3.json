@@ -101,5 +101,14 @@
         }
       ]
     }
+  ],
+  "order": [
+    {
+      "expression": {
+        "type": "variable",
+        "value": "?label"
+      },
+      "descending": false
+    }
   ]
 }

@@ -129,5 +129,14 @@
         }
       ]
     }
+  ],
+  "order": [
+    {
+      "expression": {
+        "type": "variable",
+        "value": "?reviewDate"
+      },
+      "descending": true
+    }
   ]
 }

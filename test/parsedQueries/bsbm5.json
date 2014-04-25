@@ -166,5 +166,14 @@
         }
       ]
     }
+  ],
+  "order": [
+    {
+      "expression": {
+        "type": "variable",
+        "value": "?productLabel"
+      },
+      "descending": false
+    }
   ]
 }

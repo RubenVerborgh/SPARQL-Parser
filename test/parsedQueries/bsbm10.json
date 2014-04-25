@@ -75,5 +75,25 @@
         }
       ]
     }
+  ],
+  "order": [
+    {
+      "expression": {
+        "operation": "http://www.w3.org/2001/XMLSchema#double",
+        "arguments": [
+          {
+            "type": "operator",
+            "operator": "stringify",
+            "arguments": [
+              {
+                "type": "variable",
+                "value": "?price"
+              }
+            ]
+          }
+        ]
+      },
+      "descending": false
+    }
   ]
 }
