@@ -1,0 +1,40 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "?product",
+    "?label"
+  ],
+  "patterns": [
+    {
+      "type": "BGP",
+      "triples": [
+        {
+          "subject": "?product",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "?label"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "type": "operator",
+      "operator": "testRegex",
+      "arguments": [
+        {
+          "type": "variable",
+          "value": "?label"
+        },
+        {
+          "type": "literal",
+          "value": "\"word\""
+        }
+      ]
+    }
+  ]
+}
