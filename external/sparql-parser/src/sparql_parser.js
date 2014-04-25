@@ -11665,7 +11665,7 @@ SparqlParser.parser = (function(){
           if (result0 === null) {
             pos0 = pos;
             pos1 = pos;
-            if (input.substr(pos, 11) === "LANGMATCHES") {
+            if (input.substr(pos, 11).toUpperCase() === "LANGMATCHES") {
               result0 = "LANGMATCHES";
               pos += 11;
             } else {
