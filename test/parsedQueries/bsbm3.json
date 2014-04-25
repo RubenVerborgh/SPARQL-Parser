@@ -1,0 +1,105 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "?product",
+    "?label"
+  ],
+  "patterns": [
+    {
+      "type": "BGP",
+      "triples": [
+        {
+          "subject": "?product",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "?label"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType119"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+          "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1038"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1",
+          "object": "?p1"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric3",
+          "object": "?p3"
+        }
+      ]
+    },
+    {
+      "type": "OPTIONAL",
+      "patterns": [
+        {
+          "type": "BGP",
+          "triples": [
+            {
+              "subject": "?product",
+              "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+              "object": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1043"
+            },
+            {
+              "subject": "?product",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "object": "?testVar"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "type": "operator",
+      "operator": "greaterThan",
+      "arguments": [
+        {
+          "type": "variable",
+          "value": "?p1"
+        },
+        {
+          "type": "number",
+          "value": 314
+        }
+      ]
+    },
+    {
+      "type": "operator",
+      "operator": "lessThan",
+      "arguments": [
+        {
+          "type": "variable",
+          "value": "?p3"
+        },
+        {
+          "type": "number",
+          "value": 270
+        }
+      ]
+    },
+    {
+      "type": "operator",
+      "operator": "not",
+      "arguments": [
+        {
+          "type": "operator",
+          "operator": "isBound",
+          "arguments": [
+            {
+              "type": "variable",
+              "value": "?testVar"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
