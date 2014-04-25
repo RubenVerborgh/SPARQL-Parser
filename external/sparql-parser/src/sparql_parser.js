@@ -1407,9 +1407,12 @@ SparqlParser.parser = (function(){
         
         reportFailures++;
         pos0 = pos;
+        while (/\s/.test(input.charAt(pos)))
+          pos++;
         if (input.substr(pos, 8) === "DESCRIBE") {
           result0 = "DESCRIBE";
           pos += 8;
+          parse_WS();
         } else {
           result0 = null;
           if (reportFailures === 0) {
@@ -1439,13 +1442,13 @@ SparqlParser.parser = (function(){
             }
           }
           if (result1 !== null) {
-            result2 = [];
+            parse_WS();
             result3 = parse_DatasetClause();
             while (result3 !== null) {
               result2.push(result3);
               result3 = parse_DatasetClause();
             }
-            if (result2 !== null) {
+            if (result1 !== null) {
               result3 = parse_WhereClause();
               result3 = result3 !== null ? result3 : "";
               if (result3 !== null) {
@@ -1476,7 +1479,11 @@ SparqlParser.parser = (function(){
         if (reportFailures === 0 && result0 === null) {
           matchFailed("[10] DescribeQuery");
         }
-        return result0;
+        return result0 && {
+          kind: 'describe',
+          vars: result0[1],
+          pattern: result0[3],
+        };
       }
       
       function parse_AskQuery() {

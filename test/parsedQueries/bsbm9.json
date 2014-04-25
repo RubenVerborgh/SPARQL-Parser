@@ -1,0 +1,18 @@
+{
+  "type": "DESCRIBE",
+  "variables": [
+    "?x"
+  ],
+  "patterns": [
+    {
+      "type": "BGP",
+      "triples": [
+        {
+          "subject": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite1/Review7958",
+          "predicate": "http://purl.org/stuff/rev#reviewer",
+          "object": "?x"
+        }
+      ]
+    }
+  ]
+}
