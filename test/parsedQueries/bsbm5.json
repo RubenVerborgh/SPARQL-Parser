@@ -1,0 +1,170 @@
+{
+  "type": "SELECT",
+  "variables": [
+    "?product",
+    "?productLabel"
+  ],
+  "patterns": [
+    {
+      "type": "BGP",
+      "triples": [
+        {
+          "subject": "?product",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "?productLabel"
+        },
+        {
+          "subject": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer1/Product28",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+          "object": "?prodFeature"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature",
+          "object": "?prodFeature"
+        },
+        {
+          "subject": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer1/Product28",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1",
+          "object": "?origProperty1"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1",
+          "object": "?simProperty1"
+        },
+        {
+          "subject": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer1/Product28",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2",
+          "object": "?origProperty2"
+        },
+        {
+          "subject": "?product",
+          "predicate": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2",
+          "object": "?simProperty2"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "type": "operator",
+      "operator": "notEquals",
+      "arguments": [
+        "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer1/Product28",
+        {
+          "type": "variable",
+          "value": "?product"
+        }
+      ]
+    },
+    {
+      "type": "operator",
+      "operator": "and",
+      "arguments": [
+        {
+          "type": "operator",
+          "operator": "lessThan",
+          "arguments": [
+            {
+              "type": "variable",
+              "value": "?simProperty1"
+            },
+            {
+              "type": "operator",
+              "operator": "sum",
+              "arguments": [
+                {
+                  "type": "variable",
+                  "value": "?origProperty1"
+                },
+                {
+                  "type": "number",
+                  "value": 120
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "operator",
+          "operator": "greaterThan",
+          "arguments": [
+            {
+              "type": "variable",
+              "value": "?simProperty1"
+            },
+            {
+              "type": "operator",
+              "operator": "difference",
+              "arguments": [
+                {
+                  "type": "variable",
+                  "value": "?origProperty1"
+                },
+                {
+                  "type": "number",
+                  "value": 120
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "operator",
+      "operator": "and",
+      "arguments": [
+        {
+          "type": "operator",
+          "operator": "lessThan",
+          "arguments": [
+            {
+              "type": "variable",
+              "value": "?simProperty2"
+            },
+            {
+              "type": "operator",
+              "operator": "sum",
+              "arguments": [
+                {
+                  "type": "variable",
+                  "value": "?origProperty2"
+                },
+                {
+                  "type": "number",
+                  "value": 170
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "operator",
+          "operator": "greaterThan",
+          "arguments": [
+            {
+              "type": "variable",
+              "value": "?simProperty2"
+            },
+            {
+              "type": "operator",
+              "operator": "difference",
+              "arguments": [
+                {
+                  "type": "variable",
+                  "value": "?origProperty2"
+                },
+                {
+                  "type": "number",
+                  "value": 170
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
