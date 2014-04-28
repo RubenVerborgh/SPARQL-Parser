@@ -80,7 +80,7 @@
     {
       "expression": {
         "type": "operator",
-        "operation": "http://www.w3.org/2001/XMLSchema#double",
+        "operator": "http://www.w3.org/2001/XMLSchema#double",
         "arguments": [
           {
             "type": "operator",
