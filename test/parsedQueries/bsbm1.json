@@ -61,5 +61,6 @@
       "descending": false
     }
   ],
+  "modifier": "DISTINCT",
   "limit": 10
 }

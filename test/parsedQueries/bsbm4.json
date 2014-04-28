@@ -91,6 +91,7 @@
       "descending": false
     }
   ],
+  "modifier": "DISTINCT",
   "limit": 10,
   "offset": 5
 }
